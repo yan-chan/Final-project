@@ -2,7 +2,7 @@
 <head>
     <script src = "final-project.js"></script>
     <script src = "phaser.min.js"></script>
-    <script src = "preloaded.js"></script>
+    <script src = "preload.js"></script>
     <script src = "gametitle.js"></script>
     <script src = "gameover.js"></script>
     <script src = "Boot.js"></script>
@@ -10,14 +10,14 @@
      <body>
            <script> 
            (function() {
-           var game = new Phaser.Game(500,200,Phaser.auto,"game"); 
+           var game = new Phaser.Game(500,200,Phaser.CANVAS,"game"); 
             game.state.add("state1",mainState);
                game.state.add("Boot",boot); 
-               game.state.add("Preload",preloaded);
+               game.state.add("Preload",preload);
                game.state.add("GameTitle",gameTitle);
                game.state.add("GameOver",gameOver);
-               game.state.start("boot",);
-        }());
+            game.state.start("Boot");
+        })();
            </script>   
     </body>
     

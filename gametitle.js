@@ -10,6 +10,6 @@ var gameTitle = {
     },
     
     playTheGame: function(){
-        this.game.state.start('final-project');
+        this.game.state.start('state1');
     }
 };

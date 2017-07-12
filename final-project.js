@@ -1,12 +1,11 @@
 var mainState = {
-    preload: function(){
+    preload: function () {
        this.game.load.image('player','https://media.giphy.com/media/xUA7aLu5CHIboYsapG/giphy.gif' ); 
         this.game.load.image('lava','https://media.giphy.com/media/l0IyosstgVfHS3N0k/giphy.gif');
         this.game.load.image('coin','http://piskel-imgstore-b.appspot.com/img/4ec630e8-6268-11e7-878f-bd340cb4a00a.gif');
-        this.game.load.image('wall','New Piskel (11).png');
+        this.game.load.image('wall','New Piskel (12).png');
         
     },
-    
     create: function(){
         this.cursor = this.game.input.keyboard.createCursorKeys();
       this.game.stage.backgroundImage = "Drawing (2).png";
