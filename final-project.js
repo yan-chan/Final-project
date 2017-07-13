@@ -1,6 +1,7 @@
 var mainState = {
     preload: function () {
-       this.game.load.image('player','https://media.giphy.com/media/xUA7aLu5CHIboYsapG/giphy.gif' ); 
+       this.game.load.image('player','New Piskel (7) (1).gif' ); 
+        
         this.game.load.image('lava','https://media.giphy.com/media/l0IyosstgVfHS3N0k/giphy.gif');
         this.game.load.image('coin','http://piskel-imgstore-b.appspot.com/img/4ec630e8-6268-11e7-878f-bd340cb4a00a.gif');
         this.game.load.image('wall','New Piskel (12).png');
@@ -8,14 +9,14 @@ var mainState = {
     },
     create: function(){
         this.cursor = this.game.input.keyboard.createCursorKeys();
-      this.game.stage.backgroundImage = "Drawing (2).png";
+      this.game.stage.backgroundColor = 'white';
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
         
         this.game.world.enableBody = true;
         
-        this.player = this.game.add.sprite(70,100, 'player');
+        this.player = this.game.add.sprite(140,200, 'player');
         
-        this.player.body.gravity.y = 550;
+        this.player.body.gravity.y = 400;
     
     
         this.walls = this.game.add.group();
@@ -30,22 +31,22 @@ var mainState = {
             
             
            
-        'x!x!x!x!x!x!x!x!x!x!x!x!x!x!x!x!x!x!x',
-        'x                                   x',
-        'x                                   x',
-        'x                                   x',
-        'x           xxx        x!x      xxxxx',    
-        'x                x                  x',
-        'x      o             o              x',
-        '!xxx!!    x!!!xxx    !x!     xxxx   x',
-        '!                                   x',
-        'x                xxxxx      xx   xxxx',
-        '!         !                         x',
-        '!    xxx              o         o   x',
-        'x         o                 xx      x',
-        '!                   xxxx          !!!',
-        '!         !    x                !!! x',
-        'xxxxxxxxxxxxxxxx!!!!!!xxxxxxxxxxxxxxx',
+        'x!x!x!x!x!x!x!!x!x!xxxxxxxxxxxxxxxxxxxxxxxx',
+        'x                                         x',
+        'x       o    x                            x',
+        'x                                         x',
+        'x                   x!x      xxxx         x',    
+        'x                                         x',
+        'x      o            o                     x',
+        '! x    !  x x! ! !xxx    !x!          x   x',
+        '!                                         x',
+        'x   x             xxxxx      x x   x x x  x',
+        '!         !                               x',
+        '!                     o         o         x',
+        'x     x   o                 xx            x',
+        '!                   xxxx            !     !',
+        '!             x                !!         x',
+        'xxxxxxxxxxxxxxxxxxxx!!!xxxxxxxxxxxxxxxxxxxx',
         ];
 
           // Create the level by going through the array

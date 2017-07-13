@@ -6,11 +6,12 @@
     <script src = "gametitle.js"></script>
     <script src = "gameover.js"></script>
     <script src = "Boot.js"></script>
+    
     </head>
      <body>
            <script> 
            (function() {
-           var game = new Phaser.Game(500,200,Phaser.CANVAS,"game"); 
+           var game = new Phaser.Game(1000,400,Phaser.CANVAS,"game"); 
             game.state.add("state1",mainState);
                game.state.add("Boot",boot); 
                game.state.add("Preload",preload);
