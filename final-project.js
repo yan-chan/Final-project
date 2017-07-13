@@ -2,12 +2,14 @@ var mainState = {
     preload: function () {
        this.game.load.image('player','New Piskel (7) (1).gif' ); 
         
-        this.game.load.image('lava','https://media.giphy.com/media/l0IyosstgVfHS3N0k/giphy.gif');
+        this.game.load.image('lava','New Piskel (13).png');
         this.game.load.image('coin','http://piskel-imgstore-b.appspot.com/img/4ec630e8-6268-11e7-878f-bd340cb4a00a.gif');
         this.game.load.image('wall','New Piskel (12).png');
         
     },
     create: function(){
+//        this.score = 0;
+//        this.text = this.game.add.text(10,10,"score:" + this.score);
         this.cursor = this.game.input.keyboard.createCursorKeys();
       this.game.stage.backgroundColor = 'white';
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -16,7 +18,7 @@ var mainState = {
         
         this.player = this.game.add.sprite(140,200, 'player');
         
-        this.player.body.gravity.y = 400;
+        this.player.body.gravity.y = 100;
     
     
         this.walls = this.game.add.group();
@@ -31,18 +33,19 @@ var mainState = {
             
             
            
-        'x!x!x!x!x!x!x!!x!x!xxxxxxxxxxxxxxxxxxxxxxxx',
+        'x!xx!xx!xx!xx!xx!xx!xx!xx!xxxxxxxxxxxxxxxxx',
         'x                                         x',
-        'x       o    x                            x',
+        'x       o    x                          o x',
         'x                                         x',
-        'x                   x!x      xxxx         x',    
+        'x                   xx!xx      xxxx       x',    
         'x                                         x',
         'x      o            o                     x',
-        '! x    !  x x! ! !xxx    !x!          x   x',
+        '! x    !   xx!!  !!xxx    !xx!            x',
         '!                                         x',
-        'x   x             xxxxx      x x   x x x  x',
+        'x   x             xxxxx      xx   xxx     x',
         '!         !                               x',
-        '!                     o         o         x',
+        '!                                         x',
+        'x    o         o                          x',
         'x     x   o                 xx            x',
         '!                   xxxx            !     !',
         '!             x                !!         x',
@@ -72,7 +75,10 @@ var mainState = {
                     this.lavas.add(enemy);
                 }
             }
-    }
+        }
+        this.score = 0;
+        this.text = this.game.add.text(10,10, "score:" + this.score, {fontSize:'20px',fill: '#000'});
+        this.text.addColor("#ff0000",0);
     },
     update: function(){
         this.physics.arcade.collide(this.walls,this.player);
@@ -98,6 +104,8 @@ var mainState = {
     },
     takeCoin: function(player,coin){
         coin.kill();
+    this.score += 10;
+        this.text.text = "score:" + this.score;
     },
     restart: function(){
        this.game.state.start('GameOver');

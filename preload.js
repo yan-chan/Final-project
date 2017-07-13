@@ -7,10 +7,10 @@ var preload = {
      
         
         this.game.load.image('player', 'https://media.giphy.com/media/xUA7aLu5CHIboYsapG/giphy.gif'); 
-        this.game.load.image('lava','https://media.giphy.com/media/l0IyosstgVfHS3N0k/giphy.gif');
+        this.game.load.image('lava','New Piskel (13).png');
         this.game.load.image('coin','http://piskel-imgstore-b.appspot.com/img/4ec630e8-6268-11e7-878f-bd340cb4a00a.gif'); 
-        this.game.load.image('gameTitle','Drawing (1).png');
-        this.game.load.image('play','Drawing (3).png');
+        this.game.load.image('gameTitle','Drawing (5).png');
+        this.game.load.image('play','Drawing (5).png');
         this.game.load.image('gameover','http://piskel-imgstore-b.appspot.com/img/b9807a6b-626b-11e7-bfce-bd340cb4a00a.gif'); 
         
         
