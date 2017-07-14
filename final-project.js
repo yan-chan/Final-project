@@ -33,7 +33,7 @@ var mainState = {
             
             
            
-        'x!xx!xx!xx!xx!xx!xx!xx!xx!xxxxxxxxxxxxxxxxx',
+        'x!xx!xx!xx!xx!xx!xx!xx!xx!xxxxxxxxx!!xx!!xx',
         'x                                         x',
         'x       o    x                          o x',
         'x                                         x',
@@ -41,14 +41,16 @@ var mainState = {
         'x                                         x',
         'x      o            o                     x',
         '! x    !   xx!!  !!xxx    !xx!            x',
+        '!                                         x',    
         '!                                         x',
         'x   x             xxxxx      xx   xxx     x',
         '!         !                               x',
         '!                                         x',
         'x    o         o                          x',
-        'x     x   o                 xx            x',
-        '!                   xxxx            !     !',
-        '!             x                !!         x',
+        'x     x   o                 xx        o   x',
+        '!                   xxxx         !!       !',
+        '!             x                           x',
+        '!                                         x',    
         'xxxxxxxxxxxxxxxxxxxx!!!xxxxxxxxxxxxxxxxxxxx',
         ];
 
